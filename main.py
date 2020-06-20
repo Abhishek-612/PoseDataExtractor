@@ -115,77 +115,77 @@ def process(input_image, params, model_params,label):
     canvas = create_blank(input_image.shape[1],input_image.shape[0])  # B,G,R order
 
     try:
-        cv2.line(canvas, all_peaks[14][0][0:2], all_peaks[16][0][0:2], color=(0,255,0), thickness=2)
+        cv2.line(canvas, all_peaks[14][0][0:2], all_peaks[16][0][0:2], colors[16], thickness=2)
     except:
         pass
     try:
-        cv2.line(canvas, all_peaks[14][0][0:2], all_peaks[0][0][0:2], color=(0,255,0), thickness=2)
+        cv2.line(canvas, all_peaks[14][0][0:2], all_peaks[0][0][0:2], colors[14], thickness=2)
     except:
         pass
     try:
-        cv2.line(canvas, all_peaks[15][0][0:2], all_peaks[0][0][0:2], color=(0,255,0), thickness=2)
+        cv2.line(canvas, all_peaks[15][0][0:2], all_peaks[0][0][0:2], colors[3], thickness=2)
     except:
         pass
     try:
-        cv2.line(canvas, all_peaks[15][0][0:2], all_peaks[17][0][0:2], color=(0,255,0), thickness=2)
+        cv2.line(canvas, all_peaks[15][0][0:2], all_peaks[17][0][0:2], colors[17], thickness=2)
     except:
         pass
     try:
-        cv2.line(canvas, all_peaks[1][0][0:2], all_peaks[0][0][0:2], color=(0,255,0), thickness=2)
+        cv2.line(canvas, all_peaks[1][0][0:2], all_peaks[0][0][0:2], colors[0], thickness=2)
     except:
         pass
     try:
-        cv2.line(canvas, all_peaks[1][0][0:2], all_peaks[8][0][0:2], color=(0,255,0), thickness=2)
+        cv2.line(canvas, all_peaks[1][0][0:2], all_peaks[8][0][0:2], colors[8], thickness=2)
     except:
         pass
     try:
-        cv2.line(canvas, all_peaks[9][0][0:2], all_peaks[8][0][0:2], color=(0,255,0), thickness=2)
+        cv2.line(canvas, all_peaks[9][0][0:2], all_peaks[8][0][0:2], colors[9], thickness=2)
     except:
         pass
     try:
-        cv2.line(canvas, all_peaks[9][0][0:2], all_peaks[10][0][0:2], color=(0,255,0), thickness=2)
+        cv2.line(canvas, all_peaks[9][0][0:2], all_peaks[10][0][0:2], colors[10], thickness=2)
     except:
         pass
     try:
-        cv2.line(canvas, all_peaks[1][0][0:2], all_peaks[11][0][0:2], color=(0,255,0), thickness=2)
+        cv2.line(canvas, all_peaks[1][0][0:2], all_peaks[11][0][0:2], colors[11], thickness=2)
     except:
         pass
     try:
-        cv2.line(canvas, all_peaks[12][0][0:2], all_peaks[11][0][0:2], color=(0,255,0), thickness=2)
+        cv2.line(canvas, all_peaks[12][0][0:2], all_peaks[11][0][0:2], colors[12], thickness=2)
     except:
         pass
     try:
-        cv2.line(canvas, all_peaks[12][0][0:2], all_peaks[13][0][0:2], color=(0,255,0), thickness=2)
+        cv2.line(canvas, all_peaks[12][0][0:2], all_peaks[13][0][0:2], colors[13], thickness=2)
     except:
         pass
     try:
-        cv2.line(canvas, all_peaks[1][0][0:2], all_peaks[2][0][0:2], color=(0,255,0), thickness=2)
+        cv2.line(canvas, all_peaks[1][0][0:2], all_peaks[2][0][0:2], colors[12], thickness=2)
     except:
         pass
     try:
-        cv2.line(canvas, all_peaks[3][0][0:2], all_peaks[2][0][0:2], color=(0,255,0), thickness=2)
+        cv2.line(canvas, all_peaks[3][0][0:2], all_peaks[2][0][0:2], colors[2], thickness=2)
     except:
         pass
     try:
-        cv2.line(canvas, all_peaks[3][0][0:2], all_peaks[4][0][0:2], color=(0,255,0), thickness=2)
+        cv2.line(canvas, all_peaks[3][0][0:2], all_peaks[4][0][0:2], colors[10], thickness=2)
     except:
         pass
     try:
-        cv2.line(canvas, all_peaks[1][0][0:2], all_peaks[5][0][0:2], color=(0,255,0), thickness=2)
+        cv2.line(canvas, all_peaks[1][0][0:2], all_peaks[5][0][0:2], colors[9], thickness=2)
     except:
         pass
     try:
-        cv2.line(canvas, all_peaks[6][0][0:2], all_peaks[5][0][0:2], color=(0,255,0), thickness=2)
+        cv2.line(canvas, all_peaks[6][0][0:2], all_peaks[5][0][0:2], colors[6], thickness=2)
     except:
         pass
     try:
-        cv2.line(canvas, all_peaks[6][0][0:2], all_peaks[7][0][0:2], color=(0,255,0), thickness=2)
+        cv2.line(canvas, all_peaks[6][0][0:2], all_peaks[7][0][0:2], colors[13], thickness=2)
     except:
         pass
 
     for i in range(18):  # drawing all the detected key points.
         for j in range(len(all_peaks[i])):
-            cv2.circle(canvas, all_peaks[i][j][0:2], 5, color=(0,0,255), thickness=-1)
+            cv2.circle(canvas, all_peaks[i][j][0:2], 4, colors[i], thickness=-1)
 
     global count,name
     cv2.imwrite('data/{}/{}_{}_{}.png'.format(dic[label],name,dic[label],str(count)),canvas)
