@@ -379,7 +379,7 @@ if __name__ == '__main__':
 
 
     f = open('data/pose_data.csv','a')
-    if not os.path.exists('pose_data.csv'):
+    if not os.path.exists('data/pose_data.csv'):
         f.write('name,label,p0_x,p0_y,p1_x,p1_y,p2_x,p2_y,p3_x,p3_y,p4_x,p4_y,p5_x,p5_y,p6_x,p6_y,p7_x,p7_y,p8_x,p8_y,p9_x,p9_y,p10_x,p10_y,p11_x,p11_y,p12_x,p12_y,p13_x,p13_y,p14_x,p14_y,p15_x,p15_y,p16_x,p16_y,p17_x,p17_y\n')
 
     print('\n========================================================================')
