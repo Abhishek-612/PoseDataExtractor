@@ -271,7 +271,7 @@ def getPoints(all_peaks,label,dic):
         p17 = (np.nan,np.nan)
 
     global count,name
-    f.write('{}_{}_{}.png,{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}\n'.format(name,dic[label],count,label,p0[0],p0[1],p1[0],p1[1],p2[0],p2[1],p3[0],p3[1],p4[0],p4[1],p5[0],p5[1],p6[0],p6[1],p7[0],p7[1],p8[0],p8[1],p9[0],p9[1],p10[0],p10[1],p11[0],p11[1],p12[0],p12[1],p13[0],p13[1],p14[0],p14[1],p15[0],p15[1],p16[0],p16[1],p17[0],p17[1]))
+    f.write('{}_{}_{}.png,{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}\n'.format(name,dic[label],count,dic[label],p0[0],p0[1],p1[0],p1[1],p2[0],p2[1],p3[0],p3[1],p4[0],p4[1],p5[0],p5[1],p6[0],p6[1],p7[0],p7[1],p8[0],p8[1],p9[0],p9[1],p10[0],p10[1],p11[0],p11[1],p12[0],p12[1],p13[0],p13[1],p14[0],p14[1],p15[0],p15[1],p16[0],p16[1],p17[0],p17[1]))
 
 
 def checkPosition(all_peaks):
@@ -387,9 +387,9 @@ if __name__ == '__main__':
     print('========================================================================')
     choice = int(input('Pick one and remember to do the action related to THAT ACTION ONLY! :)\n(P.S. - Any other number to exit)\n'))
 
-    print('\n*********  BE READY! (Recording will go for 2 minutes)  *********\n')
+    print('\n*********  BE READY! (Recording will go for 2 minutes. Exit by pressing "q" key)  *********\n')
 
-    while 0 <= choice < 4:
+    while 0 <= choice < 5:
         cap = cv2.VideoCapture(0)
         vi = cap.isOpened()
         start = time.time()
@@ -420,6 +420,9 @@ if __name__ == '__main__':
         print('0: Attentive\n1: Head-rested on hand\n2: Not looking at the screen\n3: Writing\n4: Leaning back')
         print('========================================================================')
         choice = int(input('Pick one and remember to do the action related to THAT ACTION ONLY! :)\n(P.S. - Any other number to exit)\n'))
-
+        if choice<5:
+            print('\n*********  BE READY! (Recording will go for 2 minutes. Exit by pressing "q" key)  *********\n')
+        else:
+            print('\n*********  EXIT!  *********\n')
 
 f.close()
