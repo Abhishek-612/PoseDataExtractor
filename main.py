@@ -402,7 +402,7 @@ if __name__ == '__main__':
 
             while (time.time() - start) <= 120:
                 tic = time.time()
-                print('Time:{}\n'.format(str(time.time()-start)))
+                print('Time: {}\n'.format(str(time.time()-start)))
                 ret, frame = cap.read()
                 params, model_params = config_reader()
                 count+=1
